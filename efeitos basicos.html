@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>finalmente efeitos</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/tudo.css">
+    <script>
+    $(function() {
+        var ex=$('.ex1');
+
+        $('.ev1').click(function() {
+            ex.hide('slow');
+        });
+
+        $('.ev2').click(function() {
+            ex.show('slow');
+        }); 
+
+        $('.ev3').click(function() {
+            ex.toggle('slow');
+        }); 
+
+
+        $('.ev4').keyup(function() {
+            var texto = $(this).val();
+
+            if(texto == 'hide'){
+                ex.hide('slow');
+            }
+            if(texto == 'show'){
+                ex.show('slow');
+            }
+            if(texto == 'toggle'){
+                ex.toggle('slow');
+            }
+        });
+        
+        var ex1 =$('.ex1');
+        var ex15 =$('.ex15');
+        var button=$(':button');
+
+        button.click(function() {
+            ex1.fadeTo(2000,0.4,function() {
+                ex15.css('background','#ccc').
+                fadeTo(2000,0.8);
+            });
+
+        });
+});
+    </script>
+</head>
+<body>
+    <div class="ex1">Aguardando ação</div>
+    <div class="ex15">Aguardando ação</div>
+    <p class="ev1">hide</p>
+    <p class="ev2">show</p>
+    <p class="ev3">toggle</p>
+    <input type="text" class="ev4">
+    <button type="button">botão</button>
+</body>
+</html>

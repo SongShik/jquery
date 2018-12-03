@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>topo preso</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/tudo.css">
+    <script>
+    $(function() {
+        var nav = $('.menu');
+        $('body').css("height","3000px");
+
+        $(window).scroll(function() {
+            if($(this).scrollTop() > 175){
+                nav.addClass('menu-fixo')
+                .css('background','#ccc');
+                
+            }else{
+                nav.removeClass('menu-fixo')
+                .css('background','#fff');
+            }
+        });  
+
+
+    });     
+    </script>
+
+</head>
+<body>
+    <div class="topo">
+
+    </div>
+
+    <div class="menu">
+    </div>
+</body>
+</html>

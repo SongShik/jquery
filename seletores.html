@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="jquery.js"></script>
+    
+    <script>
+        $(function(){
+           //como selecionar um atributo dentro 
+            $('.div1 h2, .p1').css('color',"#ff0000"); 
+           $('.div1').css({background:'green','color':'#00ffffff'});
+           
+           
+          // funcao de erro caso a imagem nao encontre mas nao esta funcionando
+          // $('img').error(function(){    $('img').attr("src","img/error.jpg");   });
+          // var imagem = $(this).attr("src"); declarar variavel
+             
+           //deixar a imagem responsivel com a tela 
+            $(window).resize(function(){
+                $('img').width($(window).width()).height($(window).height());
+
+            });
+            //fazer uma imagem ou elemento sumir da tela com o tamanho do scroll
+            $('body').css("height","3000px");
+            $(window).scroll(function(){
+                var topo = $(window).scrollTop();
+                if(topo > 300){
+                    $('img').fadeOut('1000');
+                }else{
+                    $('img').fadeIn('3000');
+                    
+                }
+
+
+
+            });
+        });
+    
+    
+    </script>
+</head>
+<body>
+    <h1>Olhe o codigo aqui nao te nada util cara</h1>
+    <div class="div1">
+        <h2>ficlho da div </h2>
+        <p>p filho da div 1 <span>sapn da filho 1</span></p>
+    </div>
+    <h2>fora do div</h2>
+    <p class="p1">p1 fora da div</p>
+
+    <div class="ex1">esperando acao</div>
+    <p class="ev1">um clique</p>
+
+
+    <div id="imagem">
+    <img src="img/acerto.png" id="img2">
+    </div>
+
+
+</body>
+</html>
