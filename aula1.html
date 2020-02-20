@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="jquery.js"> </script>
+    <script type="text/javascript">
+        $(function(){
+            //selecionar e editar um elemento
+            $('h1').css('color','red')
+            .hide()
+            .delay(1000)
+            .fadeIn('slow')
+            .text("agora eu troquei")
+            //clicar em um elemento
+            .click(function(){
+                
+                $('body').css('background','black')
+                $('h1').css(color,'#fff');
+
+            });
+
+            $('a').css({color:'green', display:'block'});
+            $('.3').css({color:'pink', display:'block'});
+            $('#2').css({color:'#000', display:'block'});
+
+            $('.3').click(function(){
+                $('h1').css('color','green')
+                .text("O emprego e meu caralho");
+
+            });
+
+        });
+
+        
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Arroz caralho</h1>
+
+    <a href="#">111111</a>
+    <a href="#" id="2"> 2222</a>
+    <a href="#"class="3">3333</a>
+
+</body>
+</html>
