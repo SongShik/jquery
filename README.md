@@ -1,2 +1,0 @@
-# jquery
-basico de jquery
